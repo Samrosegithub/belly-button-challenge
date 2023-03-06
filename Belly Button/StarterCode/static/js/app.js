@@ -40,6 +40,25 @@ function getData() {
     });
 };
 
+/* 
+let demographic = d3.select("#selDataset");
+
+d3.json(sample.then(function(data) {
+  console.log(data)
+  let dataset = data.names;
+  dataset.forEach((sample) => {
+    demographic
+      .append(id)
+      .append(ethinicity)
+      .append(gender)
+      .append(location)
+      .append(bbtype)
+      .ppend(wfreq)
+  }
+  ])
+} 
+])) */
+
 getData()
 
 function charts(id_)
