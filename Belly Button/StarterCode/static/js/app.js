@@ -45,7 +45,7 @@ let demographic = d3.select("#selDataset");
 
 d3.json(sample.then(function(data) {
   console.log(data)
-  let dataset = data.names;
+  let dataset = data.metadata;
   dataset.forEach((sample) => {
     demographic
       .append(id)
