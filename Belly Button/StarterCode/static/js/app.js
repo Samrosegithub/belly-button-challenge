@@ -35,29 +35,29 @@ function getData() {
 
       });
       charts(dataset[0])
-
+      metadata(dataset[0])
       
     });
 };
 
-/* 
+/* const sample2 = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json";
+
+function getData2(){
 let demographic = d3.select("#selDataset");
 
-d3.json(sample.then(function(data) {
-  console.log(data)
+  d3.json(sample2).then(function(data) {
+  console.log(data);
   let dataset = data.metadata;
-  dataset.forEach((sample) => {
-    demographic
-      .append(id)
-      .append(ethinicity)
-      .append(gender)
-      .append(location)
-      .append(bbtype)
-      .ppend(wfreq)
-  }
-  ])
-} 
-])) */
+  dataset.forEach((sample2) => {
+    demographic 
+      append(id),
+      append(ethinicity),
+      append(gender),
+      append(location),
+      append(bbtype),
+      append(wfreq)
+  })}
+  )}; */
 
 getData()
 
@@ -111,6 +111,7 @@ function charts(id_)
 
 function optionChanged(x){
     charts(x)
+    metadata(x)
 }
 
 function metadata(id_){
@@ -120,6 +121,12 @@ function metadata(id_){
         let metadataset = data.metadata;
         let filtermetadataset = metadataset.filter(x => x.id == id_)[0]; 
         console.log(filtermetadataset)
+        metadatatable.html("" )
+          for (id in filtermetadataset) {
+              metadatatable.append("h6").text(id + ": " + filtermetadataset[id])
+              
+        }
+
     });
 };
      
